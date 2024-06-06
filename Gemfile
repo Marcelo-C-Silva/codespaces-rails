@@ -73,3 +73,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "cssbundling-rails", "~> 1.4"
+
+gem "jsbundling-rails", "~> 1.3"
+gem 'bootstrap', '~> 5.0.2'
+gem 'sassc-rails'
