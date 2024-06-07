@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Usuario personagems</h1>
+
+<div id="usuario_personagems">
+  <% @usuario_personagems.each do |usuario_personagem| %>
+    <%= render usuario_personagem %>
+    <p>
+      <%= link_to "Show this usuario personagem", usuario_personagem %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New usuario personagem", new_usuario_personagem_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: personagem) do |form| %>
+  <% if personagem.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(personagem.errors.count, "error") %> prohibited this personagem from being saved:</h2>
+
+      <ul>
+        <% personagem.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :raca, style: "display: block" %>
+    <%= form.text_field :raca %>
+  </div>
+
+  <div>
+    <%= form.label :classe, style: "display: block" %>
+    <%= form.text_field :classe %>
+  </div>
+
+  <div>
+    <%= form.label :atributos, style: "display: block" %>
+    <%= form.text_field :atributos %>
+  </div>
+
+  <div>
+    <%= form.label :habilidades, style: "display: block" %>
+    <%= form.text_field :habilidades %>
+  </div>
+
+  <div>
+    <%= form.label :imagem_path, style: "display: block" %>
+    <%= form.text_field :imagem_path %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
